@@ -19,3 +19,21 @@ var spiralOrder = function (matrix) {
 
 console.log(spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))
 console.log(spiralOrder([[1,2,3,4],[5,6,7,8],[9,10,11,12]]))
+
+
+var searchInsert = function (nums, target) {
+  let left = 0;
+  let right = nums.length;
+  while (left < right) {
+    const midIdx = Math.floor((left + right) / 2)
+    const mid = nums[midIdx]
+    if (mid === target) {
+      return midIdx
+    } else if (mid > target) {
+      right = midIdx
+    } else {
+      left = midIdx + 1
+    }
+  }
+  return left
+};
