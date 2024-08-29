@@ -1,7 +1,7 @@
 class ListNode {
-  constructor(val) {
+  constructor(val, next) {
     this.val = val; // 节点存储的值
-    this.next = null;   // 指向下一个节点的指针
+    this.next = next || null;   // 指向下一个节点的指针
   }
 }
 
@@ -89,5 +89,5 @@ const linkedList2Arr = (list) => {
 }
 
 module.exports = {
-  createLinkedList, createIntersectingLists, linkedList2Arr
+  createLinkedList, createIntersectingLists, linkedList2Arr, ListNode
 }
